@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nadhin — Resume</title>
+    <style>
+        :root{
+            --bg:#eb265ec4;
+            --card:#fff;
+            --accent:#27d014;
+            --muted:#1a017b94;
+            --max-width:900px;
+            --pad:28px;
+            --radius:8px;
+            --text:#7f20be;
+            --heading:#0b1220;
+        }
+
+        *{box-sizing:border-box}
+        body{font-family:Inter, Arial, sans-serif;background:var(--bg);color:var(--text);margin:0;padding:32px;}
+
+        .container{max-width:var(--max-width);margin:0 auto;background:var(--card);padding:var(--pad);border-radius:var(--radius);box-shadow:0 6px 24px rgba(12,20,30,0.08)}
+
+        header{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+        .name{display:flex;align-items:center;justify-content:space-between;gap:12px}
+        h1{font-size:28px;margin:0;color:var(--heading);letter-spacing:0.4px}
+        .contact{font-size:14px;color:var(--muted)}
+
+        .summary{margin-top:10px;color:#374151;line-height:1.45}
+
+        .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:18px}
+
+        main{min-width:0}
+        section{margin-bottom:18px}
+        h2{font-size:16px;margin:0 0 10px 0;border-bottom:2px solid #e6eefc;padding-bottom:6px;color:var(--heading)}
+
+        ul{margin:0;padding-left:18px;color:#374151}
+        li{margin-bottom:8px}
+
+        .skills span{display:inline-block;background:#eef2ff;color:var(--accent);padding:6px 10px;border-radius:999px;margin:6px 6px 0 0;font-size:13px}
+
+        /* Right column card */
+        .card{background:#fbfdff;border:1px solid #eef3ff;padding:14px;border-radius:8px}
+
+        /* Responsive */
+        @media (max-width:880px){
+            .grid{grid-template-columns:1fr;}
+            .contact{font-size:13px}
+            h1{font-size:24px}
+        }
+
+        /* Print friendly */
+        @media print{
+            body{background:white;padding:0}
+            .container{box-shadow:none;margin:0;border-radius:0}
+            a[href]:after{content:" (" attr(href) ")"}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" role="document">
+    <header>
+        <div class="name">
+            <h1>NADHIN</h1>
+            <div class="contact" aria-label="contact">
+                Email: name@example.com • Phone: +91-XXXXXXXXXX • Location: Your City
+            </div>
+        </div>
+        <p class="summary">Motivated and detail-oriented Front-End Developer with strong knowledge of HTML5 and CSS3. Passionate about building responsive, user-friendly websites and continuously improving technical skills.</p>
+    </header>
+
+    <div class="grid">
+        <main>
+            <section aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects</h2>
+                <ul>
+                    <li><strong>Personal Portfolio Website</strong> — Designed and developed a responsive portfolio using semantic HTML and modern CSS techniques.</li>
+                    <li><strong>Landing Page</strong> — Created a modern landing page layout using CSS Grid and Flexbox for robust layouts.</li>
+                    <li><strong>Business Website</strong> — Developed a multi-page static website with clean UI, accessible markup, and structured layout.</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="education-heading">
+                <h2 id="education-heading">Education</h2>
+                <p>Bachelor’s Degree / Course Name<br>College/Institution Name — Year of Completion</p>
+            </section>
+
+            <section aria-labelledby="strengths-heading">
+                <h2 id="strengths-heading">Strengths</h2>
+                <ul>
+                    <li>Strong attention to detail</li>
+                    <li>Problem-solving skills</li>
+                    <li>Quick learner</li>
+                    <li>Team player</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="card" aria-labelledby="skills-heading">
+            <section>
+                <h2 id="skills-heading">Technical Skills</h2>
+                <div class="skills" aria-hidden="false">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Responsive Design</span>
+                    <span>Flexbox</span>
+                    <span>CSS Grid</span>
+                    <span>VS Code</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Basic JavaScript</span>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+</div>
+
+</body>
+</html>
